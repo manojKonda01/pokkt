@@ -5,7 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="js/googleapis.js" async defer></script>
     <link rel="stylesheet" href="style/style.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -59,8 +61,9 @@
                 <div id="confirm">
                     <input type="button" name="confirm" value="Create Account" class='inp'>
                 </div>
-                <div id="exist">
-                    If already had an account.
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" id='googlesignin'></div>
+                <div id="exist" style="font-family: 'Overpass Mono', monospace;">
+                    If already had an account. <br>
                     Please SignIn.
                     <div id="signin">
                         <input type="button" name="signin" id="" value="Sign In" class='inp'>
